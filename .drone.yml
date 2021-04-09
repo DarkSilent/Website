@@ -6,6 +6,7 @@ steps:
   image: node
   commands:
     - npm install
+    - npm install puppeteer
 
 - name: test
   image: node

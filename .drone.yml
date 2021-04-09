@@ -15,6 +15,7 @@ steps:
 - name: build
   image: trion/ng-cli
   commands:
+    - npm ci
     - ng build --prod --base-href "http://github.darksilent.de/"
 
 - name: publish  

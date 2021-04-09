@@ -6,11 +6,11 @@ steps:
   image: node
   commands:
     - npm install
-    - npm install @angular/cli
 
 - name: test
   image: node
   commands:
+    - npm install @angular/cli
     - ng test --progress false --watch false
 
 - name: build

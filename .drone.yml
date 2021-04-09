@@ -15,7 +15,7 @@ steps:
 - name: build
   image: node
   commands:
-    - npm build --prod --base-href "http://github.darksilent.de/"
+    - npm run build"
 
 - name: publish  
   image: plugins/gh-pages

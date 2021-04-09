@@ -2,6 +2,11 @@ kind: pipeline
 name: default
 
 steps:
+- name: install
+  image: node
+  commands:
+    - npm install
+
 - name: test
   image: trion/ng-cli-karma
   commands:
@@ -10,7 +15,6 @@ steps:
 - name: build
   image: trion/ng-cli
   commands:
-    - npm ci
     - ng build --prod --base-href "http://github.darksilent.de/"
 
 - name: publish  

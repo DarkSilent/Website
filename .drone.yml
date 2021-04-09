@@ -15,7 +15,7 @@ steps:
 - name: build
   image: node
   commands:
-    - npm run build"
+    - npm run build
 
 - name: publish  
   image: plugins/gh-pages

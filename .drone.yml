@@ -14,6 +14,7 @@ steps:
 
 - name: build
   image: trion/ng-cli
+  privileged: true
   commands:
     - npm ci
     - ng build --prod --base-href "http://github.darksilent.de/"

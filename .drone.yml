@@ -11,12 +11,12 @@ steps:
   image: node
   commands:
     - npm install @angular/cli
-    - ng test --progress false --watch false
+    - npm test --progress false --watch false
 
 - name: build
   image: node
   commands:
-    - ng build --prod --base-href "http://github.darksilent.de/"
+    - npm build --prod --base-href "http://github.darksilent.de/"
 
 - name: publish  
   image: plugins/gh-pages

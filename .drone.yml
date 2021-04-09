@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: install
-  image: johnpapa/angular-cli
+  image: node
   commands:
     - npm install
 
@@ -13,7 +13,7 @@ steps:
     - ng test --progress false --watch false
 
 - name: build
-  image: johnpapa/angular-cli
+  image: node
   commands:
     - ng build --prod --base-href "http://github.darksilent.de/"
 

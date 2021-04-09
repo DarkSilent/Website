@@ -6,13 +6,11 @@ steps:
   image: node
   commands:
     - npm install
-    - npm install puppeteer
 
 - name: test
-  image: node
+  image: trion/ng-cli-karma
   commands:
-    - npm install @angular/cli
-    - npm test --progress false --watch false
+    - ng test --progress false --watch false
 
 - name: build
   image: node

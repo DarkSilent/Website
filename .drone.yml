@@ -3,17 +3,18 @@ name: default
 
 steps:
 - name: install
-  image: trion/ng-cli
+  image: node
   commands:
     - npm install
+    - npm install @angular/cli
 
 - name: test
-  image: trion/ng-cli-karma
+  image: node
   commands:
     - ng test --progress false --watch false
 
 - name: build
-  image: trion/ng-cli
+  image: node
   commands:
     - ng build --prod --base-href "http://github.darksilent.de/"
 
